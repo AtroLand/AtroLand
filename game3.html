@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game.exe</title>
+</head>
+<body>
+  <body style="background-color: black;">
+  </body>
+    <body>
+  <canvas id="gameCanvas" width="400" height="400"></canvas>
+  <div>
+    <button onclick="movePlayer('up')">Cima</button>
+    <button onclick="movePlayer('down')">Baixo</button>
+    <button onclick="movePlayer('left')">Esquerda</button>
+    <button onclick="movePlayer('right')">Direita</button>
+  </div>
+</body>
+<script>
+  const canvas = document.getElementById('gameCanvas');
+  const context = canvas.getContext('2d');
+
+  const player = {
+    x: 50,
+    y: 50,
+    size: 20,
+    color: 'red'
+  };
+
+  const door = {
+    x: 200,
+    y: 200,
+    size: 20,
+    color: 'brown'
+  };
+
+  const tree = {
+    x: 300,
+    y: 300,
+    size: 20,
+    color: 'green'
+  };
+
+  const movePlayer = (direction) => {
+    switch(direction) {
+      case 'up':
+        player.y -= player.size;
+        break;
+      case 'down':
+        player.y += player.size;
+        break;
+      case 'left':
+        player.x -= player.size;
+        break;
+      case 'right':
+        player.x += player.size;
+        break;
+    }
+
+    if (
+      player.x < door.x + door.size &&
+      player.x + player.size > door.x &&
+      player.y < door.y + door.size &&
+      player.y + player.size > door.y
+    ) {
+      window.location.replace('jumpscare.html');
+    }
+
+    drawGame();
+  };
+
+  const drawGame = () => {
+    context.clearRect(0, 0, canvas.width, canvas.height);
+
+    context.fillStyle = player.color;
+    context.fillRect(player.x, player.y, player.size, player.size);
+
+    context.fillStyle = door.color;
+    context.fillRect(door.x, door.y, door.size, door.size);
+
+    context.fillStyle = tree.color;
+    context.fillRect(tree.x, tree.y, tree.size, tree.size);
+
+    requestAnimationFrame(drawGame);
+  };
+
+  drawGame();
+</script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            alert("fase 3");
+        });
+    </script>
+</body>
+</html>

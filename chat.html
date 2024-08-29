@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html>
+<head>
+    <title>Chatroom</title>
+</head>
+<body>
+    <h1>
+        ChatRoom
+    </h1>
+    <body style="background-color: orangered;">
+        <script>
+function sendMessage() {
+  var message = document.getElementById("message").value;
+  var chat = document.getElementById("chat");
+  var newMessage = document.createElement("div");
+  newMessage.innerText = message;
+  chat.appendChild(newMessage);
+  document.getElementById("message").value = "";
+}
+</script>
+
+<div id="chat" style="height: 200px; overflow-y: auto;"></div>
+<div>
+  <input type="text" id="message">
+  <button onclick="sendMessage()">Enviar</button>
+</div>
+<script>
+function sendMessage() {
+  var username = document.getElementById("username").value;
+  var message = document.getElementById("message").value;
+  var chat = document.getElementById("chat");
+  
+  var newMessage = document.createElement("div");
+  newMessage.innerText = username + ": " + message;
+  chat.appendChild(newMessage);
+  
+  document.getElementById("message").value = "";
+}
+</script>
+
+<div id="chat" style="height: 200px; overflow-y: auto;"></div>
+<div>
+  <input type="text" id="username" placeholder="Username">
+</div>
+</body>
+</html>
