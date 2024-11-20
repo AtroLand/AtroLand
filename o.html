@@ -1,47 +1,75 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>.</title>
-        <style>
+    <title>...</title>
+    <style>
         body {
-            background-color: black;
-            color: white;
-            font-family: 'Courier New', Courier, monospace;
+            background-color: red;
+            font-family: Arial, sans-serif;
             text-align: center;
-            overflow-y: scroll;  /* Permite a rolagem vertical */
-            height: 100vh;       /* Altura da janela do navegador */
-            margin: 0;           /* Remove margens padrão */
-            padding: 20px;       /* Padding para um espaço interno */
+            color: black;
+            margin: 0;
+            padding: 0;
         }
+
         h1 {
-            font-size: 2.5em;
+            animation: colorchange 1s infinite;
             margin-top: 50px;
         }
-        .text {
-            font-size: 1.5em;
-            line-height: 1.5;
-            animation: flicker 1.5s infinite alternate;
+
+        @keyframes colorchange {
+            0% { color: red; }
+            25% { color: blue; }
+            50% { color: green; }
+            75% { color: yellow; }
+            100% { color: purple; }
         }
-        @keyframes flicker {
-            0% { opacity: 1; }
-            50% { opacity: 0.7; }
-            100% { opacity: 1; }
+
+        .welcome-text {
+            animation: welcomeAnimation 6s linear forwards;
+            font-size: 2em;
+            margin-top: 20px;
+        }
+
+        @keyframes welcomeAnimation {
+            0% { opacity: 0; }
+            50% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+
+        a {
+            display: block;
+            margin: 10px 0;
+            text-decoration: none;
+            color: black;
+            font-size: 1.5em;
+            transition: transform 0.3s;
+        }
+
+        a:hover {
+            transform: scale(1.1);
+            color: yellow;
+        }
+
+        footer {
+            margin-top: 30px;
+            font-size: 0.8em;
         }
     </style>
 </head>
 <body>
-    <ddiv class="text-danger"></div>
-        ???: Hum <br>
-        ??? 2: O que houve? <br>
-        ???: Parece que algo está acontecendo no site <br>
-        ??? 2: E o que será? <br>
-        ???: Eu não sei... Parece alguém "entrou" dentro do site <br>
-        ??? 2: O que? mas isso é impossível, não tem como uma pessoa entrar dentro de um site <br>
-        ???: Hm, não sei parece que está criando abas, tipo. Tem uma aba com um texto que não dá pra entender nada... O texto está vermelho e está piscando mas está embaraçado, não dá pra ver nada <br>
-        ??? 2: Hm, é bem estranho. Desde que você criou o site e ninguém entrou e tava tudo bem... mas agora não, estou começando acreditar em você e ficando com medo
-    </div>
-    <a href="nao.html">.</a>
+    <h1>!!!SEJA BEM-VINDO!!!</h1>
+    <div class="welcome-text">...</div>
+
+    <nav>
+        <a href="page102.html">...</a>
+    </nav>
+
+    <footer>
+        <p>...</p>
+        <p>V0.0</p>
+    </footer>
 </body>
 </html>
