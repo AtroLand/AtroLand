@@ -5,28 +5,86 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Créditos</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
+       body {
+            background-image: url('file:///storage/emulated/0/Download/misc013.jpg');
+            font-family: 'Courier New', Courier, monospace; /* Fonte Courier era comum nos anos 90 */
+            margin: 0;
+            padding: 0;
         }
-        .creditos {
-            border: 1px solid #ccc;
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            margin: 0 15px;
+        }
+        nav a:hover {
+            text-decoration: underline; /* Efeito de hover com sublinhado */
+        }
+        .container {
+            width: 800px;
+            margin: 20px auto;
+            background-color: white;
+            padding: 15px;
+            border: 2px solid black;
+        }
+        footer {
+            background-color: #0000FF;
+            color: white;
+            text-align: center;
             padding: 10px;
-            background-color: #f9f9f9;
+            font-size: 14px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+                a {
+            display: block;
+            margin: 10px 0;
+            text-decoration: none;
+            color: black;
+            font-size: 1.5em;
+            transition: transform 0.3s;
+        }
+
+        a:hover {
+            transform: scale(1.1);
+            color: yellow;
+        }
+        .content {
+            background-color: orangered;
+            padding: 20px;
+            margin-top: 20px;
+            font-size: 16px;
         }
         h2 {
-            color: #333;
+            font-size: 22px;
+            color: black; /* Vermelho para os títulos */
+        }
+        .image {
+            width: 100%;
+            margin-top: 15px;
+        }
+        .marquee {
+            background-color: #FFFF00;
+            color: #FF0000;
+            font-size: 18px;
+            font-weight: bold;
         }
     </style>
 </head>
-<body style="background-color: orangered;">
+<body>
+    
+        <div class="container">
+        <div class="marquee">
+            <marquee>hum, Aqui devo colocar?</marquee>
+        </div
 
-    <div class="creditos">
+    <div class="content">
         <h2>Créditos</h2>
         <p>Agradecimentos especiais a todos que contribuíram para este projeto:</p>
         <ul>
             <li><strong>u/sn0wflakes_</strong> - Criador do Site.</li>
-            <li><strong>u/nomes aleatório</strong> - Responsável por fazer os desenhos.</li>
+            <li><strong>WebWaves</strong> - Responsável pelo CSS.</li>
         </ul>
     </div>
     <a href="o.html">.</a>
