@@ -5,50 +5,79 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sobre o Site</title>
     <style>
-                body {
-            background-color: orangered;
-            font-family: Arial, sans-serif;
-            color: black;
-            text-align: center;
+       body {
+            background-image: url('file:///storage/emulated/0/Download/misc013.jpg');
+            font-family: 'Courier New', Courier, monospace; /* Fonte Courier era comum nos anos 90 */
             margin: 0;
             padding: 0;
         }
-
-        h1 {
-            margin-top: 50px;
-            animation: fadeIn 2s ease-in-out;
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            margin: 0 15px;
         }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+        nav a:hover {
+            text-decoration: underline; /* Efeito de hover com sublinhado */
         }
-
-        p {
-            font-size: 1.2em;
+        .container {
+            width: 800px;
+            margin: 20px auto;
+            background-color: white;
+            padding: 15px;
+            border: 2px solid black;
         }
-
-        a {
+        footer {
+            background-color: #0000FF;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            font-size: 14px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+                a {
             display: block;
-            margin: 15px 0;
+            margin: 10px 0;
             text-decoration: none;
             color: black;
             font-size: 1.5em;
-            transition: transform 0.3s, color 0.3s;
+            transition: transform 0.3s;
         }
 
         a:hover {
             transform: scale(1.1);
             color: yellow;
         }
-
-        footer {
-            margin-top: 30px;
-            font-size: 0.8em;
+        .content {
+            background-color: orangered; /* Verde vibrante para a área de conteúdo */
+            padding: 20px;
+            margin-top: 20px;
+            font-size: 16px;
+        }
+        h2 {
+            font-size: 22px;
+            color: black; /* Vermelho para os títulos */
+        }
+        .image {
+            width: 100%;
+            margin-top: 15px;
+        }
+        .marquee {
+            background-color: #FFFF00;
+            color: #FF0000;
+            font-size: 18px;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
+        <div class="container">
+        <div class="marquee">
+            <marquee>oxi</marquee>
+        </div>
+        <div class="content">
     <p>
     No dia 16 de Agosto de 2024 u/sn0wflakes_ estava com tédio sem fazer nada ele tentava procurar uma coisa na internet para ele fazer mas ele não encontrou nada que ele possa fazer, até que ele decidiu fazer um site chamado AtroLand que era um site sobre seus personagens etc. Mas ele não sabia progamar html, css e javascript. Ele não sabia de nada até que ele decidiu procurar tutoriais de programação para fazer o seu primeiro site! (O primeiro site de u/sn0wflakes_ foi Urbancity que foi feito na WordPress mas ele deletou o site) ele olhou vários tutoriais para saber programar, colocar fotos, gifs, vídeos etc. E ele fez o site AtroLand! e ele chamou sua amiga u/nãosei para desenhar os personagens, e então u/sn0wflakes_ está atualizando o site.
     </p>
@@ -60,8 +89,6 @@
         Equipe de AtroLand.
     </p>
     <a href="index.html">Voltar</a>
-                <footer>
-        <p>Desenvolvido com carinho para você!</p>
-    </footer>
+      
 </body>
 </html>
