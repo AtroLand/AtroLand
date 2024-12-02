@@ -5,52 +5,79 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Suicide</title>
     <style>
-        body {
-            background-color: orangered;
-            font-family: Arial, sans-serif;
-            color: black;
-            text-align: center;
+               body {
+            background-image: url('file:///storage/emulated/0/Download/misc013.jpg');
+            font-family: 'Courier New', Courier, monospace; /* Fonte Courier era comum nos anos 90 */
             margin: 0;
             padding: 0;
         }
-
-        h1 {
-            margin-top: 50px;
-            animation: fadeIn 2s ease-in-out;
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            margin: 0 15px;
         }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+        nav a:hover {
+            text-decoration: underline; /* Efeito de hover com sublinhado */
         }
-
-        p {
-            font-size: 1.2em;
-            margin: 20px 0;
-            line-height: 1.5;
+        .container {
+            width: 800px;
+            margin: 20px auto;
+            background-color: white;
+            padding: 15px;
+            border: 2px solid black;
         }
-
-        a {
-            display: inline-block;
-            margin: 15px 0;
+        footer {
+            background-color: #0000FF;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            font-size: 14px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+                a {
+            display: block;
+            margin: 10px 0;
             text-decoration: none;
             color: black;
             font-size: 1.5em;
-            transition: transform 0.3s, color 0.3s;
+            transition: transform 0.3s;
         }
 
         a:hover {
             transform: scale(1.1);
             color: yellow;
         }
-
-        footer {
-            margin-top: 30px;
-            font-size: 0.8em;
+        .content {
+            background-color: orangered; /* Verde vibrante para a área de conteúdo */
+            padding: 20px;
+            margin-top: 20px;
+            font-size: 16px;
+        }
+        h2 {
+            font-size: 22px;
+            color: black; /* Vermelho para os títulos */
+        }
+        .image {
+            width: 100%;
+            margin-top: 15px;
+        }
+        .marquee {
+            background-color: #FFFF00;
+            color: #FF0000;
+            font-size: 18px;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
+        <div class="container">
+        <div class="marquee">
+            <marquee>hum, Aqui devo colocar?</marquee>
+        </div>
+        <div class="content">
     <h1>Suicide</h1>
     <h1>[STATUS DELETADO]</h1>
     <p>
@@ -61,9 +88,5 @@
         <a href="secret.html">NÃO CLIQUE AQUI! (sendo construído)</a>
         <a href="page003.html">Voltar</a>
     </nav>
-
-    <footer>
-        <p>Desenvolvido com carinho para você!</p>
-    </footer>
 </body>
 </html>
