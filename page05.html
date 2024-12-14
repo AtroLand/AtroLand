@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Sobre o Site</title>
+</head>
+<style>
+      /* Estilos gerais */
+    body {
+      font-family: 'Arial', sans-serif;
+      background-image: url(img/1009.jpg);
+      color: #fff;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    h2 {
+      font-size: 2.5em;
+      margin-top: 50px;
+      color: #ffb703;
+    }
+
+    h3 {
+      font-size: 1.5em;
+      margin-bottom: 30px;
+      color: #f4f4f4;
+    }
+
+    a {
+      display: block;
+      margin: 15px auto;
+      padding: 15px 30px;
+      width: 250px;
+      background-color: darkorange;
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.2em;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      transition: background-color 0.3s, transform 0.3s;
+    }
+
+    a:hover {
+      background-color: orangered;
+      transform: scale(1.05);
+    }
+
+    /* Player de música */
+    .music-container {
+      margin-top: 40px;
+    }
+
+    audio {
+      display: none; /* Player oculto */
+    }
+
+    .now-playing {
+      margin-top: 20px;
+      font-size: 1.2em;
+      color: #ffd60a;
+    }
+    </style>
+<body>
+  <h2>
+    Sobre
+  </h2>
+  <p>
+    Se quiser sabe mais
+  </p>
+  <a href="https://docs.google.com/document/d/16KmgSWctr9ofMaS45dmQ9knPn6sL02PvYjxO3N02fBg/edit?usp=drivesdk">Sobre o Site completo</a>
+  <a href="index2.html">Voltar</a>
+  
+    <div class="music-container">
+    <p class="now-playing" id="nowPlaying">Tocando agora: Carregando...</p>
+    <audio id="audioPlayer" controls autoplay></audio>
+  </div>
+  
+  <script>
+    // Lista de músicas
+    const musicList = [
+      { name: "Música 1", src: "musics/01. t e l e p a t h テレパシー能力者 - 真夜中の後に愛 [Love after midnight].mp3" },
+      { name: "Música 2", src: "musics/BEAR_ Soundtrack - Chapter Ten.mp3" },
+      { name: "Música 3", src: "musics/t e l e p a t h テレパシー能力者 - 消えていく.mp3" },
+      { name: "Música 4", src: "musics/BEAR_ Soundtracks _ Frontrooms Theme (Roblox).mp3" },
+      { name: "Música 5", src: "musics/No More (Remastered).mp3" },
+      { name: "Música 6", src: "musics/I_ve Been Delayed - Penguin Chat 2 _ Club Penguin OST.mp3" },
+      { name: "Música 7", src: "musics/BEAR_ _ Malbear Boss Theme [High Quality Audio].mp3" },
+    ];
+
+    const audioPlayer = document.getElementById("audioPlayer");
+    const nowPlaying = document.getElementById("nowPlaying");
+
+    // Função para escolher uma música aleatória
+    function playRandomSong() {
+      const randomIndex = Math.floor(Math.random() * musicList.length);
+      const randomSong = musicList[randomIndex];
+      audioPlayer.src = randomSong.src;
+      nowPlaying.textContent = `Tocando agora: ${randomSong.name}`;
+      audioPlayer.play();
+    }
+
+    // Toca uma música aleatória ao carregar a página
+    window.onload = playRandomSong;
+
+    // Toca outra música aleatória quando a música atual termina
+    audioPlayer.addEventListener("ended", playRandomSong);
+  </script>
+</body>
+</html>
